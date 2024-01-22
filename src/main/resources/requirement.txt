@@ -1,0 +1,3 @@
+dropdown - fetch from db
+
+forgot password - instead of sending password in email, if email present to set new password and confirm password

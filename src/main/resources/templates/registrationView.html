@@ -1,45 +1,54 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
-    <title>Registration</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <title>Student Enquiry Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
 
+<body>
 <div class="container">
 
-    <h1>Registration</h1>
+    <h1>Register Here</h1>
 
-<!--    <p th:text="${msg}"></p>-->
+    <p th:text="${msg}"></p>
+    <p th:text="${errorMsg}"></p>
 
-    <form th:action="@{/register}" th:object="${counsellor}" method="POST">
+    <form th:action="@{/register}" th:object="${counselor}" method="post">
         <table>
             <tr>
-                <td><p>Name </p></td>
-                <td><input type="text" th:field="*{name}" required></td>
+                <td>Name:</td>
+                <td><input type="text" th:field="*{name}" required/> </td>
             </tr>
             <tr>
-                <td><p>Email </p></td>
-                <td><input type="email" th:field="*{email}" required></td>
+                <td>Email:</td>
+                <td><input type="email" th:field="*{email}" required/> </td>
             </tr>
             <tr>
-                <td><p>Password </p></td>
-                <td><input type="password" th:field="*{password}" required></td>
+                <td>Password:</td>
+                <td><input type="password" th:field="*{password}" required/> </td>
             </tr>
             <tr>
-                <td><p>Phone Number </p></td>
-                <td><input type="number" th:field="*{phoneNumber}" required></td>
+                <td>Phno:</td>
+                <td><input type="number" th:field="*{phoneNumber}" required/> </td>
             </tr>
             <tr>
-                <td><input type="submit" value="Register" class="btn btn-primary"></td>
+                <td></td>
+                <td><input type="submit" value="Register" class="btn btn-primary" /> </td>
             </tr>
         </table>
-    </form>
-</div>
 
+    </form>
+
+    <a href="/">Login Here</a>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

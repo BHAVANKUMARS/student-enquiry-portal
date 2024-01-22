@@ -27,11 +27,11 @@
         </thead>
         <tbody>
         <tr th:each="enq : ${enquiries}">
-            <td th:text="${enq.name}" />
-            <td th:text="${enq.phno}" />
-            <td th:text="${enq.courseName}" />
+            <td th:text="${enq.studentName}" />
+            <td th:text="${enq.contactNumber}" />
+            <td th:text="${enq.course}" />
             <td th:text="${enq.classMode}" />
-            <td th:text="${enq.enqStatus}" />
+            <td th:text="${enq.enquiryStatus}" />
         </tr>
         </tbody>
 
